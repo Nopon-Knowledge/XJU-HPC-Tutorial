@@ -1,0 +1,12 @@
+
+
+jsub -m gpu01 -q gpu -gpgpu 1 -W 00:01 -o "$HOME/logs/output.%J" -e "$HOME/logs/error.%J" -cwd "$HOME/python_project/test" "$HOME/venvs/test_env1/bin/python" helloworld.py
+
+
+
+jsub -m gpu01 -q gpu -gpgpu 1 -W 00:01 -o "$HOME/logs/output.%J" -e "$HOME/logs/error.%J" nvidia-smi
+
+
+
+
+
