@@ -1,15 +1,12 @@
 #!/usr/bin/env bash
+
 # 创建并验证一个本地虚拟环境：默认 $HOME/venvs/【您的环境名】
-# 用法：
-#   bash linux_init_venv.sh
-#   bash linux_init_venv.sh "/path/to/venv_dir" "/path/to/python"
-#   VENV_DIR=... PYBASE=... bash linux_init_venv.sh
 
 set -euo pipefail
 
 # ========= 可改参数（也支持环境变量或位置参数覆盖） =========
-VENV_DIR="${VENV_DIR:-$HOME/venvs/test_env2}"
-PYBASE="${PYBASE:-/storage/software/anaconda3/bin/python}"
+VENV_DIR="${VENV_DIR:-$HOME/venvs/test_env}" #可以改为你想要的环境路径
+PYBASE="${PYBASE:-/storage/software/anaconda3/bin/python}" #选择python来源，该默认路径的python为3.9版本
 
 # 位置参数覆盖
 if [[ $# -ge 1 ]]; then VENV_DIR="$1"; fi
