@@ -40,5 +40,5 @@ Python下载地址：https://www.python.org/downloads/source/
 编译后，会在 PREFIX="$BASE/$PYVER" 处，出现以该python版本号命名的文件夹，比如这里就会出现一个“3.13.9”文件，点击进入，看看bin文件夹内是否有对应版本的pip以及pythoon，如下图所示。
 
 <p align="center">
-    <img src="../" width="40%" alt="python源码包编译后，待上传">
+    <img src="../images/install_python_outcome.png" width="40%" alt="python源码包编译后，待上传">
 </p>
