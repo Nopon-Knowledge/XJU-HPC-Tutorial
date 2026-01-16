@@ -6,6 +6,8 @@
 
 ## 一、远程连接高算平台
 
+该部分为连接高算平台的不同方法，任选其一即可。
+
 ### 1、PyCharm SSH连接远程服务器
 
 pycharm下载地址：https://www.jetbrains.com.cn/en-us/pycharm/
@@ -40,9 +42,16 @@ macos用户直接启动“terminal”应用即可开始
 
 ## 三、环境配置
 
-安装Python流程请查看：[安装Python教程](documents/如何安装新的python.md)
+高算平台自带的python版本为3.9，假如3.9可以满足您的需求，
+现在就可以开始配置深度学习所需环境了，进入下面的链接即可。
 
 深度学习项目依赖环境配置流程请查看：[深度学习项目依赖环境配置教程](documents/深度学习项目依赖环境配置教程.md)
+
+假如3.9不能满足您的需求，需要安装其他版本的python，则进入下面的链接。
+
+安装Python流程请查看：[安装Python教程](documents/如何安装新的python.md)
+
+
 
 
 
