@@ -1,76 +1,78 @@
 # PyCharm SSH连接教程
 
-第一步，进入pycharm项目页面后，点击右上角的设置按钮
+第一步，进入pycharm项目页面后，依次点击上方的工具-部署-配置选项
 
 <p align="center">
-    <img src="../images/pycharm_settingicon.png" width="40%" alt="pycharm设置按钮">
+    <img src="../images/pycharm1.png" width="40%" alt="pycharm设置按钮">
 </p>
 
-左边选择python，进入解释器，点击右方的添加解释器，选择“基于SSH”
+进入如下的配置页面，点击左上方+号添加服务器，选择SFTP,设置名称
 
 <p align="center">
-    <img src="../images/pycharm_addinterpreter.png" width="60%" alt="pycharm添加python解释器">
+    <img src="../images/pycharm2.png" width="60%" alt="pycharm添加python解释器">
 </p>
-
-第一次进入，选择新建，主机处填写192.168.222.100，用户名处填写你的账户名，点击下一步
 
 <p align="center">
-    <img src="../images/pycharm_ssh_set1.png" width="60%" alt="pycharm添加ssh连接第一步">
+    <img src="../images/pycharm3.png" width="60%" alt="pycharm添加python解释器">
 </p>
 
-输入密码，点击下一步
+点击红框进入SSH配置页面
 
 <p align="center">
-<img src="../images/pycharm_ssh_set2.png" width="60%" alt="pycharm添加ssh连接第二步">
+    <img src="../images/pycharm4.png" width="60%" alt="pycharm添加ssh连接第一步">
 </p>
 
-自省页面，等待即可，自省结束“下一步”按钮会亮起，点击下一步
+点击左上角+号添加配置，关注红框选中的区域，依次填入主机ip地址，自己的用户名（即学号）和密码，
+记得钩上保存密码
 
 <p align="center">
-<img src="../images/pycharm_ssh_set3.png" width="60%" alt="pycharm添加ssh连接第三步">
+    <img src="../images/pycharm5.png" width="60%" alt="pycharm添加ssh连接第一步">
 </p>
 
-远程项目设置页面，我们主要关注红框内的选项
+全部输入完之后点击测试连接，如果成功连接即可点击确定退出，返回到服务器设置界面
 
 <p align="center">
-<img src="../images/pycharm_ssh_set4.1.png" width="60%" alt="pycharm添加ssh连接第四步">
+<img src="../images/pycharm6.png" width="60%" alt="pycharm添加ssh连接第二步">
 </p>
 
-首先开始设置虚拟环境位置，点击右侧文件夹图标，进入如下页面
+在服务器设置界面也点一下测试连接，成功连接则服务器设置完毕
 
 <p align="center">
-<img src="../images/pycharm_ssh_hostdir1.png" width="60%" alt="ssh查看远程主机">
+<img src="../images/pycharm7.png" width="60%" alt="pycharm添加ssh连接第三步">
 </p>
 
-进入Storage/Home/【你的账户名】，比如我的账户名是201400920，我就进入201400920文件夹，如下图所示
+现在，我们需要设置远端和本地的项目同步路径，点击上方的映射按钮，选择刚刚那个服务器设置，点击部署路径
 
 <p align="center">
-<img src="../images/pycharm_ssh_hostdir2.png" width="45%" alt="ssh查看远程主机">
-<img src="../images/pycharm_ssh_hostdir3.png" width="45%" alt="ssh查看远程主机">
+<img src="../images/pycharm8.png" width="60%" alt="pycharm添加ssh连接第四步">
 </p>
-
-右键点击账户对应的文件夹，新建环境存放目录，我命名为venvs（即virtual environments），
-再右击venvs文件夹，新建一个目录，该目录命名为你想要的环境名，例如我现在想要的是一个用于测试的环境，
-我新建一个名为test_env的新目录，然后选择该目录，点击确定后完成。
 
 <p align="center">
-<img src="../images/pycharm_ssh_hostvenvlocation.png" width="45%" alt="ssh查看远程主机 设置venvs路径">
+<img src="../images/pycharm9.png" width="60%" alt="pycharm添加ssh连接第四步">
 </p>
 
-之后我们选择基础解释器路径，点击省略号图标后进入远程主机根目录，依次进入并选择Storage/Software/anaconda3/bin/python3.9
+设置好后，点击确定，返回主界面，右击项目目录，选择部署-上传
 
-最后，勾选“自动上传项目文件到服务器”，设置同步文件夹路径，之后项目中的内容会被同步到该路径下，依次进入Storage/Home/[你的账户名],
-这里建议在自己的用户根目录下新建一个存放项目的文件夹，命名为python_project，再在此文件夹下新建要存放对应项目的项目文件夹。
-最终的路径应为Storage/Home/【你的账户名】/python_project/【你的项目名称】
+此时会将本地的项目同步到刚刚设置的那个远端路径里
+
+<p align="center">
+<img src="../images/pycharm10.png" width="70%" alt="选择远程终端">
+</p>
 
 全部设置完之后点击右下角的“创建”按钮，等待其配置完成后，点击pycharm页面左下角的“终端”按钮，点击下拉箭头，选择刚刚设置好的远程终端，
 
 <p align="center">
-<img src="../images/pycharm_terminal1.png" width="70%" alt="选择远程终端">
+<img src="../images/pycharm12.png" width="70%" alt="选择远程终端">
 </p>
 
 选择后进入如下终端页面，则SSH连接完成。
 
 <p align="center">
 <img src="../images/pycharm_terminal2.png" width="70%" alt="远程终端连接成功">
+</p>
+
+点击工具-部署-浏览远程主机 可以打开一个远程主机目录侧边栏，方便确认远端的文件
+
+<p align="center">
+<img src="../images/pycharm11.png" width="70%" alt="选择远程终端">
 </p>
